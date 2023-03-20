@@ -1,5 +1,5 @@
 {
-  "name": "chatgpt",
+  "name": "gpt4-ui",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.4",
+    "@next/font": "13.1.1",
     "firebase": "^9.18.0",
-    "next": "13.2.4",
+    "next": "13.1.1",
     "openai": "^3.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

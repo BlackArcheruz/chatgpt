@@ -1,4 +1,4 @@
-import '@/styles/globals.css';
+import '../styles/globals.css'
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import { useEffect, useState } from "react";
@@ -21,19 +21,18 @@ const signIn = () => auth.signInWithPopup(provider);
 const signOut = () => auth.signOut();
 
 export default function App({ Component, pageProps }) {
-  const [user, setUser] = useState(null);
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged(async (user) => {
+    const [user, setUser] = useState(null);
+    useEffect(() => {
+      firebase.auth().onAuthStateChanged(async (user) => {
       setUser(user);
-    });
-  }, []);
-
-  return( 
-        <Component  
-        {...pageProps} 
+      });
+    }, []);
+    
+    return(
+       <Component {...pageProps} 
         user={user} 
         signIn={signIn} 
         signOut={signOut}  
-        />
-  )
+      />
+      )
 }
